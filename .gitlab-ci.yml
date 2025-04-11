@@ -1,9 +1,9 @@
-image: maven:3.8.5-openjdk-11
+image: gradle:8.5-jdk17
 
 stages:
   - test
 
-test_job:
+run_unit_test:
   stage: test
   script:
-    - mvn test
+    - gradle test
