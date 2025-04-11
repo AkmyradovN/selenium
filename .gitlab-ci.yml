@@ -1,0 +1,9 @@
+image: gradle:8.5-jdk17
+
+stages:
+  - test
+
+run_unit_test:
+  stage: test
+  script:
+    - gradle test
