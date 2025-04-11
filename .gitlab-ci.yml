@@ -1,0 +1,11 @@
+image: openjdk:11
+
+stages:
+  - test
+
+test_job:
+  stage: test
+  script:
+    - mkdir classes
+    - javac -d classes src/main/java/MaxCalculator.java src/test/java/MaxCalculatorTest.java
+    - java -cp classes org.junit.runner.JUnitCore MaxCalculatorTest
