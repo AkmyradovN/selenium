@@ -1,0 +1,9 @@
+test_with_coverage:
+    stage: test
+    image: gradle:8.0.2
+    script:
+        - gradle test
+    artifacts:
+        paths:
+            - build/reports/jacoco/test/html
+        expire_in: 1 week
